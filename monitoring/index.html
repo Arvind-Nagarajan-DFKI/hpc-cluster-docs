@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#monitoring-with-grafana" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -336,6 +341,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring (Grafana)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -353,6 +378,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-monitoring-is-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Monitoring Is Important
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Architecture Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grafana
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-to-slurm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship to Slurm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-scope-and-future-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Scope and Future Extensions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -456,6 +577,93 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-monitoring-is-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Monitoring Is Important
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Architecture Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grafana
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-to-slurm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship to Slurm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-scope-and-future-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Scope and Future Extensions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -472,9 +680,83 @@
 
 
 
-  <h1>Monitoring (Grafana)</h1>
-
-
+<h1 id="monitoring-with-grafana">Monitoring with Grafana</h1>
+<p>Asgard uses <strong>Grafana</strong> to monitor the health and performance of the GPU
+workstation/cluster. Monitoring provides visibility into resource usage and
+helps ensure that jobs are running efficiently and correctly.</p>
+<p>At the current stage, Grafana is used as the primary monitoring and visualization
+tool.</p>
+<hr />
+<h2 id="why-monitoring-is-important">Why Monitoring Is Important</h2>
+<p>Monitoring allows administrators and users to:</p>
+<ul>
+<li>Observe GPU utilization during Slurm jobs</li>
+<li>Detect idle or underutilized GPUs</li>
+<li>Monitor system load and resource usage</li>
+<li>Identify potential performance bottlenecks</li>
+<li>Validate that allocated resources are being used as expected</li>
+</ul>
+<p>Without monitoring, GPU resources can be silently wasted or misconfigured jobs
+can go unnoticed.</p>
+<hr />
+<h2 id="monitoring-architecture-overview">Monitoring Architecture Overview</h2>
+<p>The monitoring setup in Asgard consists of:</p>
+<ul>
+<li><strong>Grafana</strong> running as a centralized visualization service</li>
+<li>Metrics collected from the system and GPU stack</li>
+<li>Dashboards displaying real-time and historical usage</li>
+</ul>
+<p>Grafana provides a single interface to observe system behavior during job
+execution.</p>
+<hr />
+<h2 id="grafana">Grafana</h2>
+<p>Grafana is a web-based monitoring and visualization platform.</p>
+<p>In Asgard, Grafana is used to:</p>
+<ul>
+<li>Visualize GPU utilization and memory usage</li>
+<li>Monitor CPU and system load</li>
+<li>Observe resource usage trends over time</li>
+<li>Support debugging of Slurm jobs and workloads</li>
+</ul>
+<p>Grafana dashboards present cluster metrics in an intuitive and accessible way.</p>
+<hr />
+<h2 id="relationship-to-slurm">Relationship to Slurm</h2>
+<p>Monitoring complements Slurm scheduling:</p>
+<ul>
+<li><strong>Slurm</strong> controls <em>resource allocation</em></li>
+<li><strong>Grafana</strong> shows <em>resource utilization</em></li>
+</ul>
+<p>For example:
+- Slurm allocates a GPU to a job
+- Grafana shows whether that GPU is actively used or idle</p>
+<p>This helps identify inefficient jobs or configuration issues.</p>
+<hr />
+<h2 id="access-policy">Access Policy</h2>
+<ul>
+<li>Grafana dashboards are <strong>read-only for users</strong></li>
+<li>Dashboard configuration is managed by administrators</li>
+<li>Users are encouraged to consult Grafana to understand job behavior</li>
+</ul>
+<p>Monitoring does not allow users to interfere with other jobs or system operation.</p>
+<hr />
+<h2 id="current-scope-and-future-extensions">Current Scope and Future Extensions</h2>
+<p>At the current stage of Asgard:</p>
+<ul>
+<li>Grafana is deployed and operational</li>
+<li>Monitoring focuses on system- and GPU-level metrics</li>
+<li>The setup is suitable for a single-node prototype</li>
+</ul>
+<p>In future phases, this setup can be extended with:
+- More detailed GPU metrics
+- Job-level attribution
+- Alerts and notifications
+- Integration with cluster-wide monitoring components</p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>Grafana provides essential visibility into the Asgard GPU environment, enabling
+both administrators and users to understand how resources are used during Slurm
+jobs. Even in its initial form, monitoring is a key component of a stable and
+efficient GPU cluster.</p>
 
 
 
