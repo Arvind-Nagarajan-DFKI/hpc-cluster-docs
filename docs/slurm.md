@@ -51,3 +51,7 @@ cd "$JOB_DIR"
 python train.py
 
 ```
+
+
+
+# ADD ACCOUNT PARAMETER AND SRUN/SBATCH
