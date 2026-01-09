@@ -207,6 +207,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -223,6 +241,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#asgard-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asgard facts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -464,6 +512,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#asgard-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asgard facts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -482,21 +549,26 @@
 <h1 id="asgard-gpu-cluster">Asgard GPU Cluster</h1>
 <p>Asgard is a small-scale GPU cluster prototype designed for reproducible,
 containerized machine learning and high-performance workloads.</p>
-<p>The system combines:
-- Slurm for job scheduling
-- Enroot and Pyxis for containerized execution
-- A structured file system for data management
-- Grafana for monitoring GPU usage and system health</p>
+<p>The system combines:</p>
+<ul>
+<li>Slurm for job scheduling</li>
+<li>Enroot and Pyxis for containerized execution</li>
+<li>A structured file system for data management</li>
+<li>Grafana for monitoring GPU usage and system health</li>
+</ul>
 <p>This documentation explains both <strong>how to use</strong> the cluster and <strong>how it is built</strong>.</p>
-<p>Asgard facts:
-- 4 GPUs (NVIDIA RTX Pro 6000 Server)
-- AMD Epic Turin CPU (96 CPU Cores)
-- 1.5 TiB RAM
-- 480GB x 2 SSD
-- 3TB x 4 HDD NVMe RAID0
-- Slurm Workload Manager
-- Enroot container environments
-- Grafana monitoring suite</p>
+<hr />
+<h2 id="asgard-facts">Asgard facts</h2>
+<ul>
+<li><strong>GPUs:</strong> 4 GPUs (NVIDIA RTX Pro 6000 Server)</li>
+<li><strong>CPU:</strong> AMD Epic Turin CPU (96 CPU Cores)</li>
+<li><strong>Memory:</strong> 1.5 TiB RAM</li>
+<li><strong>System Storage:</strong> 480GB × 2 SSD</li>
+<li><strong>Data Storage:</strong> 3TB × 4 HDD NVMe RAID0</li>
+<li><strong>Workload Manager:</strong> Slurm Workload Manager</li>
+<li><strong>Containers:</strong> Enroot container environments</li>
+<li><strong>Monitoring:</strong> Grafana monitoring suite</li>
+</ul>
 
 
 
