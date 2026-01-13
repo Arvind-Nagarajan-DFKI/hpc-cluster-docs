@@ -12,7 +12,7 @@ At the moment, Enroot and Pyxis are supported through srun. For batch jobs, this
 srun \
   --container-image=/enroot/nvcr.io_nvidia_pytorch_23.12-py3.sqsh \
   --container-workdir="`pwd`" \
-  --container-mounts=/netscratch:/netscratch,/ds:/ds:ro,"`pwd`":"`pwd`" \
+  --container-mounts=/home:/home,"`pwd`":"`pwd`" \
   echo "hello world!"
 ```
 

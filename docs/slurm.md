@@ -36,6 +36,7 @@ Jobs are submitted using the `sbatch` command with a job script.
 #!/bin/bash
 
 #SBATCH --job-name=asgard-train
+#SBATCH --account=DFKI-Cluster
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
@@ -52,6 +53,4 @@ python train.py
 
 ```
 
-
-
-# ADD ACCOUNT PARAMETER AND SRUN/SBATCH
+The account parameter is added as each Slurm job must be tied to an account for it to be able to run.
