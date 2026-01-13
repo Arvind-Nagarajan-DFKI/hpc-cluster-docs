@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../containers/">
+        <link rel="prev" href="../filesystem/">
       
       
-        <link rel="next" href="../monitoring/">
+        <link rel="next" href="../containers/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Slurm Job Scheduling - Asgard GPU Cluster Documentation</title>
+        <title>Resource Allocation - Asgard GPU Cluster Documentation</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slurm-job-scheduling" class="md-skip">
+        <a href="#resource-allocation" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slurm Job Scheduling
+              Resource Allocation
             
           </span>
         </div>
@@ -278,10 +278,35 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../resources/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resource Allocation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -297,6 +322,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resource-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resource Allocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -332,37 +386,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Slurm Job Scheduling
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../slurm/" class="md-nav__link">
         
   
   
@@ -378,98 +405,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#core-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jobs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jobs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodes-and-gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nodes and GPUs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#job-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Job ID
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submitting-a-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Submitting a Job
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-job-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example Job Script
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -599,8 +534,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -609,71 +542,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-concepts" class="md-nav__link">
+  <a href="#resource-allocation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jobs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jobs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodes-and-gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nodes and GPUs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#job-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Job ID
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submitting-a-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Submitting a Job
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-job-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example Job Script
+        Resource Allocation
       
     </span>
   </a>
@@ -697,49 +569,24 @@
 
 
 
-<h1 id="slurm-job-scheduling">Slurm Job Scheduling</h1>
-<p>Slurm is the workload manager used by <strong>Asgard</strong> to schedule and execute jobs on
-the GPU cluster. Users do not run heavy workloads directly on the login node;
-instead, they submit jobs to Slurm, which allocates GPUs, CPUs, and memory in a
-controlled and reproducible manner.</p>
-<hr />
-<h2 id="core-concepts">Core Concepts</h2>
-<h3 id="jobs">Jobs</h3>
-<p>A <strong>job</strong> is a unit of work submitted to Slurm. Each job requests specific
-resources such as GPUs, CPUs, memory, and runtime.</p>
-<h3 id="nodes-and-gpus">Nodes and GPUs</h3>
-<ul>
-<li>A <strong>node</strong> is a physical machine.</li>
-<li>A <strong>GPU</strong> is an accelerator attached to a node.</li>
-<li>Slurm allocates GPUs using <strong>GRES (Generic Resources)</strong>.</li>
-</ul>
-<h3 id="job-id">Job ID</h3>
-<p>Each submitted job is assigned a unique <strong>Job ID</strong>, available inside the job as
-the environment variable <code>$SLURM_JOB_ID</code>.</p>
-<hr />
-<h2 id="submitting-a-job">Submitting a Job</h2>
-<p>Jobs are submitted using the <code>sbatch</code> command with a job script.</p>
-<hr />
-<h2 id="example-job-script">Example Job Script</h2>
-<pre><code class="language-bash">#!/bin/bash
+  <h1>Resource Allocation</h1>
 
-#SBATCH --job-name=asgard-train
-#SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
-#SBATCH --time=01:00:00
-#SBATCH --output=logs/%x-%j.out
-
-# Create a job-specific working directory
-JOB_DIR=/netscratch/$USER/job_$SLURM_JOB_ID
-mkdir -p &quot;$JOB_DIR&quot;
-cd &quot;$JOB_DIR&quot;
-
-# Run training inside the allocated resources
-python train.py
-
+<h2 id="resource-allocation">Resource Allocation</h2>
+<p>srun offers many options to specify what resources to allocate for your job. These are the most important ones (run srun --help for the complete list):</p>
+<pre><code class="language-bash">-n, --ntasks=ntasks         number of tasks to run
+    --ntasks-per-node=n     number of tasks to invoke on each node
+-N, --nodes=N               number of nodes on which to run (N = min[-max])
+-c, --cpus-per-task=ncpus   number of cpus required per task
+    --cpus-per-gpu=n        number of CPUs required per allocated GPU
+-G, --gpus=n                count of GPUs required for the job
+    --gpus-per-node=n       number of GPUs required per allocated node
+    --gpus-per-task=n       number of GPUs required per spawned task
+    --mem=MB                minimum amount of real memory
+                            real memory required per allocated GPU
+    --mem-per-cpu=MB        maximum amount of real memory per allocated
+                            cpu required by the job.
+                            --mem &gt;= --mem-per-cpu if --mem is specified.
 </code></pre>
-<h1 id="add-account-parameter-and-srunsbatch">ADD ACCOUNT PARAMETER AND SRUN/SBATCH</h1>
 
 
 

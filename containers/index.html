@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="../filesystem/">
+        <link rel="prev" href="../resources/">
       
       
         <link rel="next" href="../slurm/">
@@ -278,6 +278,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resource Allocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -497,14 +524,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin-guide/" class="md-nav__link">
+      <a href="../batch_jobs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Admin Guide
+    Batch Jobs
   
 
     
@@ -700,6 +727,13 @@ working directory.</p>
                         flags are separated with &quot;+&quot;, e.g. &quot;ro+rprivate&quot;
 
 --container-workdir=PATH
+</code></pre>
+<p>The following command creates a container from the image /enroot/nvcr.io_nvidia_pytorch_23.12-py3.sqsh, with the current directory as workdir, and makes /netscratch, /ds, and the current directory available inside the container:</p>
+<pre><code class="language-bash">$ srun \
+  --container-image=/enroot/nvcr.io_nvidia_pytorch_23.12-py3.sqsh \
+  --container-workdir=&quot;`pwd`&quot; \
+  --container-mounts=/netscratch/$USER:/netscratch/$USER,/ds:/ds:ro,&quot;`pwd`&quot;:&quot;`pwd`&quot; \
+  [your command]
 </code></pre>
 
 

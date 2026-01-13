@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../containers/">
+        <link rel="prev" href="../user-guide/">
       
       
-        <link rel="next" href="../monitoring/">
+        <link rel="next" href="../roadmap/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Slurm Job Scheduling - Asgard GPU Cluster Documentation</title>
+        <title>Batch Jobs - Asgard GPU Cluster Documentation</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slurm-job-scheduling" class="md-skip">
+        <a href="#using-sbatch-instead-of-srun" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slurm Job Scheduling
+              Batch Jobs
             
           </span>
         </div>
@@ -332,37 +332,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Slurm Job Scheduling
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../slurm/" class="md-nav__link">
         
   
   
@@ -378,98 +351,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#core-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jobs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jobs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodes-and-gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nodes and GPUs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#job-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Job ID
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submitting-a-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Submitting a Job
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-job-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example Job Script
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -532,10 +413,35 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../batch_jobs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batch Jobs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -551,6 +457,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-sbatch-instead-of-srun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using sbatch instead of srun
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -599,8 +534,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -609,71 +542,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-concepts" class="md-nav__link">
+  <a href="#using-sbatch-instead-of-srun" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jobs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jobs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodes-and-gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nodes and GPUs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#job-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Job ID
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submitting-a-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Submitting a Job
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-job-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example Job Script
+        Using sbatch instead of srun
       
     </span>
   </a>
@@ -697,49 +569,23 @@
 
 
 
-<h1 id="slurm-job-scheduling">Slurm Job Scheduling</h1>
-<p>Slurm is the workload manager used by <strong>Asgard</strong> to schedule and execute jobs on
-the GPU cluster. Users do not run heavy workloads directly on the login node;
-instead, they submit jobs to Slurm, which allocates GPUs, CPUs, and memory in a
-controlled and reproducible manner.</p>
-<hr />
-<h2 id="core-concepts">Core Concepts</h2>
-<h3 id="jobs">Jobs</h3>
-<p>A <strong>job</strong> is a unit of work submitted to Slurm. Each job requests specific
-resources such as GPUs, CPUs, memory, and runtime.</p>
-<h3 id="nodes-and-gpus">Nodes and GPUs</h3>
-<ul>
-<li>A <strong>node</strong> is a physical machine.</li>
-<li>A <strong>GPU</strong> is an accelerator attached to a node.</li>
-<li>Slurm allocates GPUs using <strong>GRES (Generic Resources)</strong>.</li>
-</ul>
-<h3 id="job-id">Job ID</h3>
-<p>Each submitted job is assigned a unique <strong>Job ID</strong>, available inside the job as
-the environment variable <code>$SLURM_JOB_ID</code>.</p>
-<hr />
-<h2 id="submitting-a-job">Submitting a Job</h2>
-<p>Jobs are submitted using the <code>sbatch</code> command with a job script.</p>
-<hr />
-<h2 id="example-job-script">Example Job Script</h2>
+  <h1>Batch Jobs</h1>
+
+<h2 id="using-sbatch-instead-of-srun">Using sbatch instead of srun</h2>
+<p>At the moment, Enroot and Pyxis are supported through srun. For batch jobs, this means writing a normal sbatch script and running your containerized workload via srun inside the script.</p>
 <pre><code class="language-bash">#!/bin/bash
+# let's set the following defaults (can be overriden on commandline):
+#SBATCH --job-name sbatch_test
+#SBATCH --partition batch
 
-#SBATCH --job-name=asgard-train
-#SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
-#SBATCH --time=01:00:00
-#SBATCH --output=logs/%x-%j.out
-
-# Create a job-specific working directory
-JOB_DIR=/netscratch/$USER/job_$SLURM_JOB_ID
-mkdir -p &quot;$JOB_DIR&quot;
-cd &quot;$JOB_DIR&quot;
-
-# Run training inside the allocated resources
-python train.py
-
+# put your srun command with args here
+srun \
+  --container-image=/enroot/nvcr.io_nvidia_pytorch_23.12-py3.sqsh \
+  --container-workdir=&quot;`pwd`&quot; \
+  --container-mounts=/netscratch:/netscratch,/ds:/ds:ro,&quot;`pwd`&quot;:&quot;`pwd`&quot; \
+  echo &quot;hello world!&quot;
 </code></pre>
-<h1 id="add-account-parameter-and-srunsbatch">ADD ACCOUNT PARAMETER AND SRUN/SBATCH</h1>
+<p>Then, we submit our batch job with (sbatch[script]).</p>
 
 
 
