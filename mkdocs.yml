@@ -14,9 +14,10 @@ nav:
   - Home: index.md
   - Architecture: architecture.md
   - File System: filesystem.md
+  - Resource Allocation: resources.md
   - Containers (Enroot & Pyxis): containers.md
   - Slurm Job Scheduling: slurm.md
   - Monitoring (Grafana): monitoring.md
   - User Guide: user-guide.md
-  - Admin Guide: admin-guide.md
+  - Batch Jobs: batch_jobs.md
   - Roadmap: roadmap.md

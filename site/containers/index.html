@@ -390,6 +390,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#software-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Stack
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -609,6 +620,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#software-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Stack
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -657,6 +679,27 @@ launched automatically when jobs are scheduled.</p>
 as NVIDIA NGC.</p>
 <h3 id="example-import-a-pytorch-image">Example: Import a PyTorch Image</h3>
 <pre><code class="language-bash">enroot import docker://nvcr.io/nvidia/pytorch:23.10-py3
+</code></pre>
+<h2 id="software-stack">Software Stack</h2>
+<p>When submitting jobs with Slurm and Pyxis, container behavior is controlled using
+container-specific options. The --container-image option defines the container
+environment in which the job runs, ensuring reproducible software dependencies.
+The --container-mounts option exposes selected directories from the host system
+inside the container, allowing access to user files, scratch space, and shared
+datasets. Finally, --container-workdir specifies the directory inside the
+container where execution begins, aligning the container’s context with the job’s
+working directory.</p>
+<pre><code class="language-bash">--container-image=[USER@][REGISTRY#]IMAGE[:TAG]|PATH
+                        [pyxis] the image to use for the container
+                        filesystem. Can be either a docker image given as
+                        an enroot URI, or a path to a squashfs file on the
+                        remote host filesystem.
+
+--container-mounts=SRC:DST[:FLAGS][,SRC:DST...]
+                        [pyxis] bind mount[s] inside the container. Mount
+                        flags are separated with &quot;+&quot;, e.g. &quot;ro+rprivate&quot;
+
+--container-workdir=PATH
 </code></pre>
 
 
