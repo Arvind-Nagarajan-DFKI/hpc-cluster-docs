@@ -16,8 +16,6 @@
         <link rel="prev" href="../user-guide/">
       
       
-        <link rel="next" href="../roadmap/">
-      
       
         
       
@@ -490,33 +488,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../roadmap/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Roadmap
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -582,7 +553,7 @@
 srun \
   --container-image=/enroot/nvcr.io_nvidia_pytorch_23.12-py3.sqsh \
   --container-workdir=&quot;`pwd`&quot; \
-  --container-mounts=/netscratch:/netscratch,/ds:/ds:ro,&quot;`pwd`&quot;:&quot;`pwd`&quot; \
+  --container-mounts=/home:/home,&quot;`pwd`&quot;:&quot;`pwd`&quot; \
   echo &quot;hello world!&quot;
 </code></pre>
 <p>Then, we submit our batch job with (sbatch[script]).</p>
