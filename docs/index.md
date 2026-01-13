@@ -24,3 +24,17 @@ This documentation explains both **how to use** the cluster and **how it is buil
 - **Workload Manager:** Slurm Workload Manager
 - **Containers:** Enroot container environments
 - **Monitoring:** Grafana monitoring suite
+
+## Connecting to VPN
+
+To access the Asgard GPU cluster, you must first connect to the **university VPN**.
+
+The cluster is hosted on the internal university network and is **not accessible
+from the public internet**. A VPN connection is required before attempting to:
+
+- SSH into the cluster
+- Submit Slurm jobs
+- Access cluster services such as Grafana
+
+Ensure that the VPN connection is active and verified **before** connecting to
+the cluster.
